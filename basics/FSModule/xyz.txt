@@ -1,0 +1,3 @@
+Open source, Security-as-Code platform 
+for developers and security teams
+to identify and eliminate risks in your cloud environments
