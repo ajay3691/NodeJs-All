@@ -1,0 +1,8 @@
+step 1: npm init -y
+step 2: pm i express mongoose chalk morgan dotenv cors bcrypt jsonwebtoken
+step 3: Update package.json 
+step 4: Create express app 
+step 5: Connect to mongodb 
+step 6: Develop user api - create new user, login user, update profile, get all users, get user 
+
+
