@@ -15,6 +15,16 @@ router.get("/users", async (req, resp) => {
         resp.status(500).json({ errors: [{ msg: " Server Error" }] });
     }
 });
+router.delete("/:id", async (req, resp) => {
+    try {
+        let userid = req.params.id;
+        let user = await User.findByIdAndDelete(userid)
+        resp.status(200).json({ msg: "Delete buddy" })
+    }
+    catch (err) {
+
+    }
+})
 /* 
 use : create new user 
 url:localhost:8080/user/add
@@ -39,6 +49,7 @@ router.post("/register", async (req, resp) => {
         resp.status(500).json({ msg: err })
     }
 })
+
 router.post("/login", async (req, resp) => {
     try {
         let { email, password } = req.body
@@ -59,7 +70,7 @@ router.post("/login", async (req, resp) => {
         }
     }
     catch (err) {
-       // console.error(err)
+        console.error(err)
         resp.status(500).json({ msg: "An error occurred during login" })
     }
 })
